@@ -1,0 +1,19 @@
+﻿@model IEnumerable<MessagesClient.Models.Message>
+
+<h2>All Articles</h2>
+<hr />
+<ol>
+    @foreach (var message in Model)
+    {
+        <li>
+            <ul>
+                <li>MessageId: @Html.DisplayFor(modelItem => message.MessageId)</li>
+                <li>Username: @Html.DisplayFor(modelItem => message.UserName)</li>
+                <li>MessageText: @Html.DisplayFor(modelItem => message.MessageText)</li>
+                <li>MessageNumber: @Html.DisplayFor(modelItem => message.MessageNumber)</li>
+                <li>MessageNote: @Html.DisplayFor(modelItem => message.MessageNote)</li>
+                <hr>
+            </ul>
+        </li>
+    }
+</ol>
