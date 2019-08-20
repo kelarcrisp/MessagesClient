@@ -1,0 +1,45 @@
+
+
+<h2>All Articles</h2>
+<hr />
+<ol>
+    @foreach (var message in @ViewBag.allMessages)
+    {
+        <li>
+            <ul>
+                <li>MessageId: @message.MessageId</li>
+                <li>Username: @message.UserName</li>
+                <li>MessageText: @message.MessageText</li>
+                <li>MessageNumber: @message.MessageNumber</li>
+                <li>MessageNote: @message.MessageNote</li>
+                <hr>
+            
+            </ul>
+        </li>
+    }
+    
+@model MessagesClient.Models.Message
+
+<h3>Make a message:</h3>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.MessageId)
+
+    @Html.LabelFor(model => model.MessageText)
+     @Html.EditorFor(model => model.MessageText)
+
+     @Html.LabelFor(model => model.MessageNumber)
+     @Html.EditorFor(model => model.MessageNumber)
+
+      @Html.LabelFor(model => model.MessageNote)
+     @Html.EditorFor(model => model.MessageNote)
+
+      @Html.LabelFor(model => model.UserName)
+     @Html.EditorFor(model => model.UserName)
+   
+     <input type ="submit" value ="Save" />
+
+}
+
+</ol>

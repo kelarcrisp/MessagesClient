@@ -28,3 +28,4 @@
 /Users/Guest/Desktop/MessagesClient/obj/Debug/netcoreapp2.2/MessagesClient.dll
 /Users/Guest/Desktop/MessagesClient/obj/Debug/netcoreapp2.2/MessagesClient.pdb
 /Users/Guest/Desktop/MessagesClient/obj/Debug/netcoreapp2.2/MessagesClient.csproj.CopyComplete
+/Users/Guest/Desktop/MessagesClient/obj/Debug/netcoreapp2.2/Razor/Views/Chat/Index.g.cshtml.cs

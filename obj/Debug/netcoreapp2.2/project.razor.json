@@ -2943,6 +2943,11 @@
   "RootNamespace": "MessagesClient",
   "Documents": [
     {
+      "FilePath": "Views/Chat/Index.cshtml",
+      "TargetPath": "Views/Chat/Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views/Home/Privacy.cshtml",
       "TargetPath": "Views/Home/Privacy.cshtml",
       "FileKind": "mvc"

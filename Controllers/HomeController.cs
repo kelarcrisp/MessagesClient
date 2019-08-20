@@ -1,6 +1,7 @@
 ﻿
 using Microsoft.AspNetCore.Mvc;
 using MessagesClient.Models;
+using System;
 
 namespace MessagesClient.Controllers
 {
@@ -8,19 +9,10 @@ namespace MessagesClient.Controllers
     {
         public IActionResult Index()
         {
-            var allMessages = Message.GetMessages();
-            PostMessage();
-            return View(allMessages);
-        }
 
-        public void PostMessage()
-        {
-            Message testMessage = new Message();
-            testMessage.MessageNote = "note note note";
-            testMessage.MessageNumber = 42;
-            testMessage.MessageText = "text";
-            testMessage.UserName = "dragonslayer555";
-            Message.PostMessage(testMessage);
+
+            return View();
+
         }
     }
 }
