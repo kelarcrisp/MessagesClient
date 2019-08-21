@@ -24,7 +24,8 @@
 
 @using (Html.BeginForm())
 {
-    @Html.HiddenFor(model => model.MessageId)
+     @Html.LabelFor(model => model.MessageId)
+     @Html.EditorFor(model => model.MessageId)
 
     @Html.LabelFor(model => model.MessageText)
      @Html.EditorFor(model => model.MessageText)

@@ -23,13 +23,15 @@ namespace MessagesClient.Models
 
         public static List<Message> GetMessages()
         {
-            var client = new RestClient("http://localhost:5000/api/");
-            var request = new RestRequest("messages", Method.GET);
+            var client = new RestClient("https://messageboard100.azurewebsites.net/");
+            var request = new RestRequest("messages/get", Method.GET);
             var response = new RestResponse();
             Task.Run(async () =>
             {
                 response = await GetResponseContentAsync(client, request) as RestResponse;
             }).Wait();
+            Console.WriteLine(response.Content);
+
             JArray jsonResponse = JsonConvert.DeserializeObject<JArray>(response.Content);
             Console.WriteLine(jsonResponse);
             var messageList = JsonConvert.DeserializeObject<List<Message>>(jsonResponse.ToString());
@@ -47,9 +49,9 @@ namespace MessagesClient.Models
         }
         public static void PostMessage(Message message)
         {
-            var client = new RestClient("http://localhost:5000/api/");
+            var client = new RestClient("https://messageboard100.azurewebsites.net/");
 
-            var request = new RestRequest("messages", Method.POST);
+            var request = new RestRequest("messages/post", Method.POST);
 
             // Json to post.
             string jsonToSend = JsonConvert.SerializeObject(message);
